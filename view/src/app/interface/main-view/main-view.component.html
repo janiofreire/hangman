@@ -1,0 +1,13 @@
+<div>
+  <select [(ngModel)]="selectedDificulte">
+    <ng-template ngFor let-dificulte [ngForOf]="mainPage.dificultes" let-i="index">
+        <option [value]="dificulte">{{dificulte}}</option>
+    </ng-template>
+  </select>  
+  <button (click)="createNewGame()"> Create New Game</button>
+</div>
+<ng-template ngFor let-gme [ngForOf]="mainPage.listGames" let-i="index">
+
+  <app-game-view [game]="gme" ></app-game-view>
+
+</ng-template> 

@@ -1,0 +1,10 @@
+
+Quantity of Remain guess:{{getRemaninGuess()}}<p>
+Word:{{getVisibleWord()}}<p>  
+Seleted Letters:{{getSendedLetter()}}</p>
+<select [(ngModel)]="selectedLetter">
+  <ng-template ngFor let-letter [ngForOf]="letters" let-i="index">
+      <option [value]="letter">{{letter}}</option>
+  </ng-template>
+</select>  
+<button (click)="sendHint()">Send Hint</button><button (click)="close()">Close</button>
